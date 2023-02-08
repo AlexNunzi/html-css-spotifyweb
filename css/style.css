@@ -102,6 +102,32 @@ footer{
 
 /* MEDIA QUERY ------------------------------------- */
 
+@media screen and (min-width: 576px){
+    .banner-fix{
+        width: calc(100% - 14rem);
+    }
+    
+    aside{
+        width: 14rem;
+    }
+    
+    .content{
+        width: calc(100% - 14rem);
+    }
+}
+
+@media screen and (min-width: 768px){
+    .container-item-content{
+        width: calc(100% / 4);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .container-item-content{
+        width: calc(100% / 6);
+    }
+}
+
 /* ANIMAZIONI -------------------------------------- */
 
 
