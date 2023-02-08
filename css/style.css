@@ -8,6 +8,12 @@
 
 /* REGOLE DI DEBUG --------------------------------- */
 
+.debug main nav, 
+.debug main .container-item, 
+.debug footer .controls-container{
+    border: 2px dashed white;
+}
+
 /* DEBUG MAIN -------------------------------------- */
 
 .debug main{
@@ -15,10 +21,6 @@
     color: white;
 }
 
-.debug main nav, 
-.debug main .container-item{
-    border: 2px dashed white;
-}
 
 .debug .debug-item{
     background-color: aqua;
@@ -26,10 +28,23 @@
     aspect-ratio: 1/1;
 }
 
+.debug .content-container{
+    border: 2px dotted #FF0000;
+}
+
+
 /* DEBUG ASIDE ------------------------------------- */
 
 /* DEBUG FOOTER ------------------------------------ */
 
+.debug .controls-container{
+    height: 2rem;
+    width: 4rem;
+}
+
+.debug .middle-controls{
+    height: 100%;
+}
 /* REGOLE DI CSS ----------------------------------- */
 /* REGOLE GENERALI --------------------------------- */
 
@@ -49,6 +64,14 @@
     justify-content: flex-start;
 }
 
+.justify-between{
+    justify-content: space-between;
+}
+
+.align-end{
+    align-items: flex-end;
+}
+
 ul{
     list-style: none;
 }
@@ -66,7 +89,19 @@ main{
     top: 0;
     right: 0;
     width: calc(100% - 3rem);
-    height: 5.5rem;
+    height: 6rem;
+    text-align: right;
+    padding: 1.25rem 0.5rem 0 0;
+}
+
+.banner-fix a{
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border: 1px solid #FFFFFF;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border-radius: 50px;
+    text-decoration: none;
 }
 
 aside{
@@ -74,22 +109,32 @@ aside{
     width: 3rem;
 }
 
+main nav ul{
+    padding-top: 0.5rem;
+    margin: 0 -0.75rem;
+}
+
+main nav ul li{
+    margin: 0 0.75rem 2.5rem
+}
+
 .content{
     background-color: #141922;
     width: calc(100% - 3rem);
     overflow-y: auto;
-    padding-top: 6.5rem;
-    padding-left: 1.5rem;
-    padding: 6.5rem 1.5rem 1.5rem;
+    padding-top: 6rem;
 }
 
+.content-container{
+    padding: 0 1.5rem 1.5rem;
+}
 
 .container-item-content{
     width: 50%;
     padding: 0.5rem 0.5rem 0 0;
 }
 
-main section{
+main section:not(:first-of-type){
     margin-top: 2.5rem;
 }
 
@@ -98,6 +143,7 @@ main section{
 footer{
     background-color: #282828;
     height: 5.5rem;
+    padding: 0.75rem 0.75rem 1.75rem;
 }
 
 /* MEDIA QUERY ------------------------------------- */
