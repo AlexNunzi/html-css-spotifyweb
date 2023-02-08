@@ -15,6 +15,17 @@
     color: white;
 }
 
+.debug main nav, 
+.debug main .container-item{
+    border: 2px dashed white;
+}
+
+.debug .debug-item{
+    background-color: aqua;
+    max-width: 300px;
+    aspect-ratio: 1/1;
+}
+
 /* DEBUG ASIDE ------------------------------------- */
 
 /* DEBUG FOOTER ------------------------------------ */
@@ -25,6 +36,23 @@
 .d-flex{
     display: flex;
 }
+
+.wrap{
+    flex-wrap: wrap;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-start{
+    justify-content: flex-start;
+}
+
+ul{
+    list-style: none;
+}
+
 
 /* MAIN -------------------------------------------- */
 
@@ -51,6 +79,18 @@ aside{
     width: calc(100% - 3rem);
     overflow-y: auto;
     padding-top: 6.5rem;
+    padding-left: 1.5rem;
+    padding: 6.5rem 1.5rem 1.5rem;
+}
+
+
+.container-item-content{
+    width: 50%;
+    padding: 0.5rem 0.5rem 0 0;
+}
+
+main section{
+    margin-top: 2.5rem;
 }
 
 /* FOOTER ------------------------------------------ */
