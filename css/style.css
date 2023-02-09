@@ -170,14 +170,7 @@ aside .playlist{
 }
 
 
-aside .playlist{
-    flex-grow: 1;
-    overflow-y: auto;
-    min-height: 50px;
-}
-
 aside .aside-top{
-    flex-shrink: 1;
     overflow-y: hidden;
 }
 
@@ -192,13 +185,8 @@ aside .aside-top{
     flex-shrink: 0;
 }
 
-aside .playlist{
-    flex-shrink: 1;
-    overflow-y: auto;
-}
 
-aside .playlist, 
-.playlist-add{
+aside .aside-middle{
     display: none;
 }
 
@@ -263,11 +251,23 @@ footer{
         display: inline-block;
     }
 
-    aside .playlist, 
-    .playlist-add{
+    aside .playlist{
         display: flex;
+        flex-shrink: 1;
+        overflow-y: auto;
     }
 
+    aside .aside-middle{
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        min-height: 9rem;
+        overflow-y: hidden;
+    }
+
+    aside .aside-middle .playlist{
+        overflow-y: auto;
+    }
 
     
     .content{
