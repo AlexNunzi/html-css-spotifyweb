@@ -36,28 +36,28 @@
 /* DEBUG ASIDE ------------------------------------- */
 
 .debug aside .logo-small{
-    height: 2rem;
+    /* height: 2rem;
     width: 2rem;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; */
 }
 
 .debug aside .logo-big{
-    height: 2rem;
+    /* height: 2rem;
     width: 7rem;
-    background-color: #FFFFFF;
+    background-color: #FFFFFF; */
 }
 
 .debug aside .icon{
-    height: 3rem;
+    /* height: 3rem;
     width: 2rem;
     background-color: #FFFFFF;
-    display: inline-block;
+    display: inline-block; */
 }
 
 .debug .aside-bottom{
-    width: 100%;
+    /* width: 100%;
     height: 5rem;
-    background-color: #FF0000;
+    background-color: #FF0000; */
 }
 
 /* DEBUG FOOTER ------------------------------------ */
@@ -167,6 +167,53 @@ aside{
     overflow: hidden;
 }
 
+aside .icon-label-wrapper a, 
+aside .playlist li a{
+    text-decoration: none;
+    color: #797979;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+aside .aside-middle a{
+    font-size: 0.85rem;
+}
+
+
+
+aside .aside-bottom .icon-label-wrapper.rounded{
+    margin-top: 0.75rem;
+}
+
+aside .aside-bottom .icon-label-wrapper.small{
+    margin-bottom: 0.5rem;
+}
+
+aside .aside-bottom hr{
+    display: none;
+}
+
+aside .logo-small{
+    height: 1.5rem;
+}
+
+aside .icon{
+    display: inline-block;
+    height: 1.5rem;
+}
+
+aside .icon-small{
+    height: 0.75rem;
+
+}
+
+aside .icon-rounded{
+    width: 1.5rem;
+    background-color: #808080;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
 aside nav li{
     margin-bottom: 1rem;
 }
@@ -176,7 +223,7 @@ aside nav .logo-small{
 }
 
 aside nav .logo-big, 
-aside nav .label{
+aside .label{
     display: none;
 }
 
@@ -188,6 +235,9 @@ aside .playlist{
     display: none;
 }
 
+aside .playlist li{
+    margin: 0.75rem 0;
+}
 
 aside .aside-top{
     overflow-y: hidden;
@@ -196,17 +246,26 @@ aside .aside-top{
 aside h3{
     text-transform: uppercase;
     margin-bottom: 1rem;
+    font-size: 0.75rem;
 }
 
 
 aside .aside-bottom, 
 aside .aside-top{
     flex-shrink: 0;
+    text-align: center;
 }
 
 
 aside .aside-middle{
     display: none;
+}
+
+aside .aside-middle i.fa-square-plus{
+    background-color: #000000;
+    color: #a3a3a3;
+    font-size: 2.5rem;
+    vertical-align: middle;
 }
 
 main .content nav ul{
@@ -316,12 +375,25 @@ footer .controls-right .progress-container{
         width: 14rem;
     }
 
+    aside .aside-bottom, 
+    aside .aside-top{
+        text-align: left;
+    }
+
+    aside .aside-bottom hr{
+        display: block;
+    }
+
     aside nav .logo-small{
         display: none;
     }
+
+    aside nav .logo-big{
+        height: 2.5rem;;
+    }
     
     aside nav .logo-big,
-    aside nav .label{
+    aside .label{
         display: inline-block;
     }
 
