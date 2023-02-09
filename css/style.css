@@ -63,13 +63,28 @@
 /* DEBUG FOOTER ------------------------------------ */
 
 .debug .controls-container{
-    height: 2rem;
-    width: 4rem;
+    /* height: 2rem;
+    width: 4rem; */
 }
 
 .debug .middle-controls{
     height: 100%;
 }
+
+.debug footer .icon{
+    width: 2rem;
+    aspect-ratio: 1/1;
+    background-color: #FFFFFF;
+}
+
+.debug footer .icon-small{
+    width: 1rem;
+    height: 1rem;
+    background-color: antiquewhite;
+    margin: 0.25rem;
+}
+
+
 /* REGOLE DI CSS ----------------------------------- */
 /* REGOLE GENERALI --------------------------------- */
 
@@ -99,6 +114,10 @@
 
 .align-center{
     align-items: center;
+}
+
+.align-selfe-center{
+    align-self: center;
 }
 
 .align-end{
@@ -227,8 +246,63 @@ main section:not(:first-of-type){
 
 footer{
     background-color: #282828;
+    color: #ffffff;
     height: 5.5rem;
     padding: 0.75rem 0.75rem 1.75rem;
+}
+
+footer .group{
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer .track{
+    font-size: 0.75rem;
+}
+
+footer .controls-container{
+    width: 12rem;
+}
+
+footer .track-info{
+    margin-left: 0.75rem;
+    flex-grow: 1;
+}
+
+
+footer .middle-controls{
+    max-width: 33rem;
+    flex-grow: 1;
+}
+
+footer .progress-container{
+    background-color: #5a5a5a;
+    height: 0.25rem;
+    flex-grow: 1;
+    margin: 0 0.5rem;
+}
+
+footer .middle-buttons{
+    width: 12rem;
+}
+
+footer .progress-bar{
+    background-color: #c1c1c1;
+    height: 100%;
+    width: 15%;
+}
+
+footer .track-timing{
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
+footer .controls-left-icons{
+    margin: 0 1.25rem;
+}
+
+footer .controls-right .progress-container{
+    min-width: 2.5rem;
 }
 
 /* MEDIA QUERY ------------------------------------- */
