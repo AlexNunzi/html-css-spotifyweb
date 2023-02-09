@@ -351,7 +351,7 @@ footer button{
 }
 
 footer .control-left img{
-    max-width: 2.5rem;
+    max-width: 1.5rem;
 }
 
 footer .control-left .group{
@@ -388,7 +388,7 @@ footer .controls-container{
 }
 
 footer .track-info{
-    margin-left: 0.75rem;
+    margin-left: 0.5rem;
     flex-grow: 1;
 }
 
@@ -416,7 +416,7 @@ footer .progress-container{
 }
 
 footer .middle-buttons{
-    width: 12rem;
+    width: 10rem;
     margin-bottom: 1rem;
 }
 
@@ -501,6 +501,10 @@ footer .controls-right button{
     
     .content{
         width: calc(100% - 14rem);
+    }
+
+    footer .control-left img{
+        max-width: 2.5rem;
     }
 
 
