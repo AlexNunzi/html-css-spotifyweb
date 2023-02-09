@@ -88,6 +88,21 @@
 /* REGOLE DI CSS ----------------------------------- */
 /* REGOLE GENERALI --------------------------------- */
 
+aside .icon-label-wrapper a, 
+aside .playlist li a, 
+.content nav ul a, 
+.content .subtitle{
+    text-decoration: none;
+    color: #797979;
+    font-size: 0.65rem;
+    font-weight: bold;
+}
+
+.rounded-img{
+object-fit: contain;
+border-radius: 50%;
+}
+
 .d-flex{
     display: flex;
 }
@@ -167,13 +182,6 @@ aside{
     overflow: hidden;
 }
 
-aside .icon-label-wrapper a, 
-aside .playlist li a{
-    text-decoration: none;
-    color: #797979;
-    font-size: 0.65rem;
-    font-weight: bold;
-}
 
 aside .aside-middle a{
     font-size: 0.85rem;
@@ -210,8 +218,6 @@ aside .icon-small{
 aside .icon-rounded{
     width: 1.5rem;
     background-color: #808080;
-    object-fit: contain;
-    border-radius: 50%;
 }
 
 aside nav li{
@@ -243,10 +249,10 @@ aside .aside-top{
     overflow-y: hidden;
 }
 
-aside h3{
+aside .aside-middle h3{
     text-transform: uppercase;
     margin-bottom: 1rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
 }
 
 
@@ -268,17 +274,27 @@ aside .aside-middle i.fa-square-plus{
     vertical-align: middle;
 }
 
+#user-name{
+    color: #ffffff;
+}
+
 main .content nav ul{
     width: 100%;
-    padding: 0.5rem 0.25rem 0;
+    padding-top: 0.5rem;
 }
 
 main .content nav ul li{
     margin-bottom: 2.5rem;
 }
 
-main .content nav ul li:not(:last-of-type){
-    margin-right: 1.5rem;
+
+
+main .content nav ul li{
+    margin: 0 0.75rem 2.5rem;
+}
+
+main .content nav a{
+    text-transform: uppercase;
 }
 
 .content{
@@ -288,6 +304,16 @@ main .content nav ul li:not(:last-of-type){
     padding-top: 6rem;
 }
 
+.content section h2, 
+.content section > .subtitle{
+    margin-bottom: 1rem;
+}
+
+.content h3{
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}
+
 .content-container{
     padding: 0 1.5rem 1.5rem;
 }
@@ -295,11 +321,18 @@ main .content nav ul li:not(:last-of-type){
 .container-item-content{
     width: 50%;
     padding: 0.5rem 0.5rem 0 0;
+    text-align: center;
+}
+
+.container-item-content img{
+    width: 100%;
 }
 
 main section:not(:first-of-type){
-    margin-top: 2.5rem;
+    margin-top: 2rem;
 }
+
+
 
 /* FOOTER ------------------------------------------ */
 
@@ -406,6 +439,7 @@ footer .controls-right .progress-container{
         display: flex;
         flex-shrink: 1;
         overflow-y: auto;
+        margin-bottom: 0.5rem;
     }
 
     aside .aside-middle{
