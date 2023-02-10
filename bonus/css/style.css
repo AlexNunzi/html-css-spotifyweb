@@ -588,6 +588,16 @@ footer .controls-right button{
 
 }
 
+@media screen and (max-height: 400px){
+    main .banner-fix{
+        display: none;
+    }
+
+    main .content{
+        padding-top: 0;
+    }
+}
+
 /* ANIMAZIONI -------------------------------------- */
 
 
