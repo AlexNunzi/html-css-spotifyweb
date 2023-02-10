@@ -5,6 +5,10 @@
     font-family: sans-serif;
 }
 
+html{
+    min-width: 400px;
+}
+
 
 /* REGOLE DI DEBUG --------------------------------- */
 
@@ -156,10 +160,11 @@ main{
 }
 
 .banner-fix{
-    background-color: rgba(255, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     top: 0;
     right: 0;
+    z-index: 500;
     width: calc(100% - 3rem);
     height: 6rem;
     text-align: right;
@@ -223,6 +228,7 @@ aside .icon-rounded{
 
 aside nav li{
     margin-bottom: 1rem;
+    position: relative;
 }
 
 aside nav .logo-small{
@@ -246,9 +252,6 @@ aside .playlist li{
     margin: 0.75rem 0;
 }
 
-aside .aside-top{
-    overflow-y: hidden;
-}
 
 aside .aside-middle h3{
     text-transform: uppercase;
@@ -286,6 +289,7 @@ main .content nav ul{
 
 main .content nav ul li{
     margin-bottom: 2.5rem;
+    position: relative;
 }
 
 
@@ -313,10 +317,25 @@ main .content nav a{
 .content h3{
     font-size: 1rem;
     margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .content-container{
     padding: 0 1.5rem 1.5rem;
+}
+
+.content-container ul li .cover-img{
+    position: relative;
+}
+
+.content-container ul .cover-img .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
 }
 
 .container-item-content{
@@ -326,6 +345,7 @@ main .content nav a{
 }
 
 .container-item-content img{
+    display: block;
     width: 100%;
 }
 
@@ -351,7 +371,7 @@ footer button{
 }
 
 footer .control-left img{
-    max-width: 1.5rem;
+    max-width: 20%;
 }
 
 footer .control-left .group{
@@ -364,12 +384,12 @@ footer .control-left .track{
 }
 
 footer .controls-left-icons{
-    margin: 0 1rem;
+    margin: 0 0.5rem 0;
+    max-width: 30%;
 }
 
 footer .controls-left-icons .icon-small{
-    width: 100%;
-    margin: 0.25rem;
+    margin: 0.05rem 0.25rem;
     font-size: 0.75rem;
     color: #797979;
 }
@@ -383,8 +403,13 @@ footer .track{
     font-size: 0.75rem;
 }
 
-footer .controls-container{
+footer .middle-controls{
     width: 12rem;
+}
+
+footer .control-left, 
+footer .controls-right{
+    width: 10rem;
 }
 
 footer .track-info{
@@ -394,7 +419,7 @@ footer .track-info{
 
 
 footer .middle-controls{
-    max-width: 33rem;
+    align-items: center;
     flex-grow: 1;
     margin: 0 0.5rem;
 }
@@ -418,6 +443,11 @@ footer .progress-container{
 footer .middle-buttons{
     width: 10rem;
     margin-bottom: 1rem;
+}
+
+footer .middle-track-bar{
+    width: 70%;
+    min-width: 10rem;
 }
 
 footer .progress-bar{
@@ -507,6 +537,9 @@ footer .controls-right button{
         max-width: 2.5rem;
     }
 
+    footer .controls-left-icons .icon-small{
+        display: inline-block;
+    }
 
 }
 
@@ -515,13 +548,6 @@ footer .controls-right button{
         width: calc(100% / 4);
     }
 
-    footer .controls-left-icons .icon-small{
-        width: 50%;
-    }
-
-    footer .controls-left-icons{
-        flex-wrap: nowrap;
-    }
 }
 
 @media screen and (min-width: 992px){
@@ -531,5 +557,44 @@ footer .controls-right button{
 }
 
 /* ANIMAZIONI -------------------------------------- */
+
+
+.content nav li.content-nav-selected::after{
+    content: '';
+    width: 50%;
+    height: 1.5px;
+    position: absolute;
+    bottom: -3px;
+    left: calc(50%);
+    transform: translateX(-50%);
+    background-color: #b6fd32;
+}
+
+aside nav li.aside-nav-selected::after{
+    content: '';
+    width: 2.5px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -8px;
+    background-color: #b6fd32;
+}
+
+
+main .content-container ul li:hover .overlay{
+    display: block;
+}
+
+main .content-container ul li:hover .overlay::after{
+    content: '\f144';
+    font-size: 3.75rem;
+    font-weight: 900;
+    font-family: "Font Awesome 5 Free";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 
 
