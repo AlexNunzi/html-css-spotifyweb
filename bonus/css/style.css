@@ -6,7 +6,7 @@
 }
 
 html{
-    min-width: 400px;
+    min-width: 320px;
 }
 
 
@@ -380,7 +380,7 @@ footer{
     background-color: #282828;
     color: #ffffff;
     height: 5.5rem;
-    padding: 0.75rem 0.75rem 1.75rem;
+    padding: 0.75rem 0.5rem 1.75rem;
 }
 
 footer button{
@@ -390,13 +390,12 @@ footer button{
 }
 
 footer .control-left img{
-    max-width: 20%;
+    max-width: 30%;
 }
 
 
 footer .controls-left-icons{
     margin: 0 0.5rem 0;
-    max-width: 30%;
 }
 
 footer .controls-left-icons .icon-small{
@@ -427,7 +426,7 @@ footer .middle-controls{
 
 footer .control-left, 
 footer .controls-right{
-    width: 10.5rem;
+    width: 5rem;
 }
 
 footer .track-info{
@@ -493,6 +492,38 @@ footer .controls-right button{
 }
 
 /* MEDIA QUERY ------------------------------------- */
+
+@media screen and (min-width: 400px){
+    html{
+        min-width: 400px;
+    }
+
+    footer .control-left{
+        flex-direction: row;
+    }
+
+    footer .control-left, 
+    footer .controls-right{
+    width: 10.5rem;
+    }
+
+    footer .control-left img{
+        max-width: 20%;
+    }
+
+    footer .controls-right{
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+    }
+
+    footer{
+        padding: 0.75rem 0.75rem 1.75rem;
+    }
+
+    footer .controls-left-icons{
+        max-width: 30%;
+    }
+}
 
 @media screen and (min-width: 576px){
     .banner-fix{
