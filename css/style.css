@@ -351,8 +351,8 @@ main .content nav a{
 }
 
 .container-item-content{
-    width: 50%;
-    padding: 0.5rem 0.5rem 0 0;
+    width: calc(50% - 0.5rem);
+    margin: 0.5rem 0.5rem 0 0;
     text-align: center;
 }
 
@@ -555,18 +555,28 @@ footer .controls-right button{
         display: inline-block;
     }
 
+    aside nav li.aside-nav-selected::after{
+        content: '';
+        width: 2.5px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -8px;
+        background-color: #b6fd32;
+    }
+
 }
 
 @media screen and (min-width: 768px){
     .container-item-content{
-        width: calc(100% / 4);
+        width: calc((100% / 4) - 0.5rem);
     }
 
 }
 
 @media screen and (min-width: 992px){
     .container-item-content{
-        width: calc(100% / 6);
+        width: calc((100% / 6) - 0.5rem);
     }
 }
 
@@ -584,15 +594,6 @@ footer .controls-right button{
     background-color: #b6fd32;
 }
 
-aside nav li.aside-nav-selected::after{
-    content: '';
-    width: 2.5px;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -8px;
-    background-color: #b6fd32;
-}
 
 main .content-container ul li:hover, 
 main .banner-fix .button:hover, 
