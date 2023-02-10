@@ -168,7 +168,7 @@ main{
     width: calc(100% - 3rem);
     height: 6rem;
     text-align: right;
-    padding: 1.25rem 0.5rem 0 0;
+    padding: 1.25rem 1rem 0 0;
 }
 
 .banner-fix a{
@@ -214,6 +214,7 @@ aside .logo-small{
 aside .icon{
     display: inline-block;
     height: 1.5rem;
+    filter: brightness(50%);
 }
 
 aside .icon-small{
@@ -233,6 +234,15 @@ aside nav li{
 
 aside nav .logo-small{
     display: inline-block;
+}
+
+aside .aside-nav-selected .label{
+    color: #ffffff;
+}
+
+aside .aside-nav-selected .icon{
+    filter: brightness(75%);
+
 }
 
 aside nav .logo-big, 
@@ -280,6 +290,8 @@ aside .aside-middle i.fa-square-plus{
 
 #user-name{
     color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
 }
 
 main .content nav ul{
@@ -374,14 +386,6 @@ footer .control-left img{
     max-width: 20%;
 }
 
-footer .control-left .group{
-    font-size: 0.65rem;
-}
-
-footer .control-left .track{
-    font-size: 0.5rem;
-    color: #797979;
-}
 
 footer .controls-left-icons{
     margin: 0 0.5rem 0;
@@ -395,12 +399,19 @@ footer .controls-left-icons .icon-small{
 }
 
 footer .group{
-    font-size: 1rem;
+    font-size: 0.65rem;
     font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
 }
 
 footer .track{
-    font-size: 0.75rem;
+    text-decoration: none;
+    font-size: 0.55rem;
+    font-weight: bold;
+    color: #797979;
+    display: block;
 }
 
 footer .middle-controls{
@@ -409,7 +420,7 @@ footer .middle-controls{
 
 footer .control-left, 
 footer .controls-right{
-    width: 10rem;
+    width: 10.5rem;
 }
 
 footer .track-info{
@@ -438,6 +449,7 @@ footer .progress-container{
     height: 0.25rem;
     flex-grow: 1;
     margin: 0 0.5rem;
+    border-radius: 0.25rem;
 }
 
 footer .middle-buttons{
@@ -454,6 +466,8 @@ footer .progress-bar{
     background-color: #c1c1c1;
     height: 100%;
     width: 15%;
+    position: relative;
+    border-radius: 0.25rem;
 }
 
 footer .track-timing{
@@ -580,6 +594,13 @@ aside nav li.aside-nav-selected::after{
     background-color: #b6fd32;
 }
 
+main .content-container ul li:hover, 
+main .banner-fix .button:hover, 
+.content nav li:hover, 
+footer .controls-container button:hover, 
+.progress-container:hover{
+    cursor: pointer;
+}
 
 main .content-container ul li:hover .overlay{
     display: block;
@@ -596,5 +617,45 @@ main .content-container ul li:hover .overlay::after{
     transform: translate(-50%, -50%);
 }
 
+main .banner-fix .button{
+    transition: all 0.15s;
+}
+
+main .banner-fix .button:hover{
+    transform: scale(1.1);
+}
 
 
+.progress-container:hover .progress-bar{
+background-color: #bbf459;
+}
+
+.progress-container:hover .progress-bar::after{
+    content: '';
+    height: 0.5rem;
+    width: 0.5rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    position: absolute;
+    right: -0.25rem;
+    top: -0.125rem;
+}
+
+aside .icon-label-wrapper:hover a, 
+aside .aside-middle li:hover a, 
+.content nav li:hover a, 
+aside .icon-label-wrapper:hover i, 
+aside .icon-label-wrapper:hover img:not(.rounded-img), 
+footer .controls-left-icons button:hover i{
+    color: #ffffff;
+    filter: brightness(100%);
+}
+
+footer .track-info .track:hover{
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+footer #play:hover{
+    transform: scale(1.1);
+}
