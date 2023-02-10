@@ -598,7 +598,9 @@ main .content-container ul li:hover,
 main .banner-fix .button:hover, 
 .content nav li:hover, 
 footer .controls-container button:hover, 
-.progress-container:hover{
+.progress-container:hover, 
+.icon-label-wrapper:not(.rounded):hover, 
+aside .playlist li:hover{
     cursor: pointer;
 }
 
